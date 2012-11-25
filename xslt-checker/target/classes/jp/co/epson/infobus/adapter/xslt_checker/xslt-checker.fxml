@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="480.0" xmlns:fx="http://javafx.com/fxml" fx:controller="jp.co.epson.infobus.adapter.xslt_checker.XsltController">
+  <children>
+    <VBox id="VBox" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER_LEFT" spacing="5.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label contentDisplay="RIGHT" prefWidth="350.0" text="Input : ">
+                  <graphic>
+                    <TextField fx:id="inputFIlePath" prefWidth="285.0" promptText="変換前xml" />
+                  </graphic>
+                </Label>
+                <Button fx:id="inputFilePathRefBtn" mnemonicParsing="false" onAction="#selectXmlFile" prefWidth="60.0" text="ref..." />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label contentDisplay="RIGHT" prefWidth="350.0" text="xslt :   ">
+                  <graphic>
+                    <TextField id="inputFIlePath" fx:id="xsltPath" prefWidth="285.0" promptText="テストするxslt" />
+                  </graphic>
+                </Label>
+                <Button fx:id="xsltRefBtn" mnemonicParsing="false" onAction="#selectXmlFile" prefWidth="60.0" text="ref..." />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label contentDisplay="RIGHT" prefWidth="350.0" text="output:">
+                  <graphic>
+                    <TextField fx:id="outputFilePath" prefWidth="285.0" promptText="変換したxmlを出力するパス" />
+                  </graphic>
+                </Label>
+                <Button fx:id="outputFilePathRefBtn" mnemonicParsing="false" onAction="#selectXmlFile" prefWidth="60.0" text="ref..." />
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Region prefWidth="285.0" />
+            <Button fx:id="exeBtn" mnemonicParsing="false" onAction="#executeConverter" prefWidth="134.0" text="execute convert" />
+          </children>
+        </HBox>
+        <VBox id="VBox" fx:id="errLogBox" prefHeight="500.0" snapToPixel="false" spacing="5.0">
+          <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="BOTTOM" prefHeight="10.0" text="log :" />
+            <TextArea fx:id="logTxt" editable="false" wrapText="true" VBox.vgrow="ALWAYS" />
+          </children>
+        </VBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

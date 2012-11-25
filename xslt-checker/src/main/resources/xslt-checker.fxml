@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="193.0" prefWidth="449.0" xmlns:fx="http://javafx.com/fxml" fx:controller="jp.co.epson.infobus.adapter.xslt_checker.XsltController">
+  <children>
+    <TextField fx:id="inputFIlePath" layoutX="81.0" layoutY="86.0" prefWidth="285.0" />
+    <Label layoutX="18.0" layoutY="89.0" text="Input :" />
+    <Label layoutX="18.0" layoutY="122.0" text="output :" />
+    <TextField id="inputFIlePath" fx:id="outputFilePath" layoutX="81.0" layoutY="117.0" prefWidth="285.0" />
+    <Label layoutX="18.0" layoutY="54.0" text="xslt :" />
+    <TextField id="inputFIlePath" fx:id="xsltPath" layoutX="81.0" layoutY="52.0" prefWidth="285.0" />
+    <Button fx:id="xsltRefBtn" layoutX="374.0" layoutY="52.0" mnemonicParsing="false" onAction="#selectXsltFile" text="ref..." />
+    <Button fx:id="inputFilePathRefBtn" layoutX="374.0" layoutY="84.0" mnemonicParsing="false" onAction="#selectInputFile" text="ref..." />
+    <Button fx:id="outputFilePathRefBtn" layoutX="374.0" layoutY="117.0" mnemonicParsing="false" onAction="#selectOutputFile" text="ref..." />
+  </children>
+</AnchorPane>
